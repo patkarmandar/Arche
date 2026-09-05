@@ -5,7 +5,7 @@
  */
 
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { Plus, Trash2, CheckSquare, Square, GripVertical, Pencil } from 'lucide-react'
+import { Plus, Trash2, CheckSquare, Square, GripVertical, Pencil, Eye } from 'lucide-react'
 import MarkdownPreview from './MarkdownPreview'
 
 // ─────────────────────────────────────────────────────────
@@ -135,12 +135,7 @@ export function MarkdownEditor({ content, onChange }) {
 
   if (editing) {
     return (
-      <div className="space-y-1">
-        <div className="flex justify-end">
-          <span className="text-xs text-text-muted px-2 py-0.5 rounded-md bg-bg-elevated border border-bg-border">
-            Editing - click outside to preview
-          </span>
-        </div>
+      <div className="relative">
         <textarea
           ref={ref}
           value={text}
@@ -148,8 +143,16 @@ export function MarkdownEditor({ content, onChange }) {
           onBlur={exitEditMode}
           placeholder="Write markdown here…"
           rows={3}
-          className="w-full bg-bg-elevated border border-accent/50 rounded-xl px-4 py-3 text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors text-sm resize-none overflow-hidden leading-relaxed min-h-[80px] font-mono"
+          className="w-full bg-bg-elevated border border-accent/50 rounded-xl px-4 pt-3 pb-8 text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors text-sm resize-none overflow-hidden leading-relaxed min-h-[80px] font-mono"
         />
+        {/* Same corner + style as the preview "Click to edit" hint - inside the
+            card at bottom-right, only the text and icon change between modes. */}
+        <div className="pointer-events-none absolute bottom-3 right-4 flex justify-end">
+          <span className="inline-flex items-center gap-1 text-xs text-text-muted">
+            <Eye size={14} />
+            Click outside to preview
+          </span>
+        </div>
       </div>
     )
   }
