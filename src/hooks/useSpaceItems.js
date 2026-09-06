@@ -33,6 +33,7 @@ const defaultContent = {
   secret: { secret: true, cipher: '' },
   draw: { strokes: [] },
   table: { columns: ['', ''], rows: [['', ''], ['', '']] },
+  authenticator: { entries: [] },
 }
 
 export function useSpaceItems(spaceId) {

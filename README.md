@@ -30,7 +30,7 @@ It follows a zero-knowledge architecture: your content is encrypted in the brows
 ## Features
 
 - Multiple spaces for separating ideas, projects, plans, references, and personal systems.
-- Multiple item types for different kinds of content, including PIN-protected secrets (see [Item types](#item-types)).
+- Multiple item types for different kinds of content, including PIN-protected secrets and a built-in authenticator for two-factor (TOTP) codes (see [Item types](#item-types)).
 - Pinning for important spaces and items.
 - Drag-and-drop reordering for spaces and page items, plus keyboard reordering inside lists.
 - Sort spaces and page items by default order, name, or newest, with the choice remembered per view.
@@ -73,6 +73,7 @@ It follows a zero-knowledge architecture: your content is encrypted in the brows
 | Secret | PIN-protected text: the title stays visible, but the content is hidden and requires re-entering your vault PIN to view or edit. |
 | Drawing | Freehand vector sketch or diagram, drawn with pen, colours, and sizes. |
 | Code | A code snippet in a monospace block with automatic syntax highlighting (language auto-detected). Copies as plain text. |
+| Authenticator | Two-factor (TOTP) codes for your accounts, generated on-device with live countdowns. Add accounts by hand or paste an `otpauth://` link; the secrets are encrypted in your vault like everything else, so the server never sees them. |
 
 All list-style types support adding, removing, drag-and-drop reordering, and keyboard reordering with `Arrow Up` / `Arrow Down`.
 

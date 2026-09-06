@@ -30,6 +30,7 @@ import { SecretEditor } from './editors/SecretEditor'
 import { DrawEditor } from './editors/DrawEditor'
 import { TableEditor } from './editors/TableEditor'
 import { CodeEditor } from './editors/CodeEditor'
+import { AuthenticatorEditor } from './editors/AuthenticatorEditor'
 import { ActionMenu } from './ui/ActionMenu'
 import { getChecklistProgress } from '../lib/checklistProgress'
 import { isOnline, enqueueOffline } from '../lib/offlineQueue'
@@ -451,7 +452,7 @@ function SpaceItem({
                   >
                     {isFullscreen ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
                   </button>
-                  {!isSmallScreen && item.type !== 'secret' && item.type !== 'draw' && (
+                  {!isSmallScreen && item.type !== 'secret' && item.type !== 'draw' && item.type !== 'authenticator' && (
                   <button
                     type="button"
                     onClick={handleCopy}
@@ -502,7 +503,7 @@ function SpaceItem({
                       },
                       // Copy is a direct header button on larger screens; on
                       // mobile it lives here instead to keep the header compact.
-                      isSmallScreen && item.type !== 'secret' && item.type !== 'draw' && {
+                      isSmallScreen && item.type !== 'secret' && item.type !== 'draw' && item.type !== 'authenticator' && {
                         id: 'copy',
                         label: copied ? 'Copied' : 'Copy',
                         icon: copied ? ClipboardCheck : ClipboardCopy,
@@ -597,6 +598,7 @@ function SpaceItem({
           {item.type === 'secret'        && <SecretEditor     key={`${item.id}:${editorVersion}`} ref={secretEditorRef} content={localContent} onChange={handleContentChange} onStateChange={setSecretState} />}
           {item.type === 'draw'          && <DrawEditor       key={`${item.id}:${editorVersion}`} content={localContent} onChange={handleContentChange} />}
           {item.type === 'table'         && <TableEditor      key={`${item.id}:${editorVersion}`} content={localContent} onChange={handleContentChange} />}
+          {item.type === 'authenticator' && <AuthenticatorEditor key={`${item.id}:${editorVersion}`} content={localContent} onChange={handleContentChange} />}
           </div>
         </div>
       )}

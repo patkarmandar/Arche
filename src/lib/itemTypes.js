@@ -1,4 +1,4 @@
-import { AlignLeft, CheckSquare, List, ListOrdered, LayoutList, FileCode, Code, KeyRound, Brush, Table } from 'lucide-react'
+import { AlignLeft, CheckSquare, List, ListOrdered, LayoutList, FileCode, Code, KeyRound, Brush, Table, ShieldCheck } from 'lucide-react'
 
 /** Human-readable labels for each item type */
 export const TYPE_LABELS = {
@@ -12,6 +12,7 @@ export const TYPE_LABELS = {
   secret: 'Secret',
   draw: 'Drawing',
   code: 'Code',
+  authenticator: 'Authenticator',
 }
 
 /** Colour scheme per item type (text, background, border) */
@@ -26,6 +27,7 @@ export const TYPE_STYLES = {
   secret: { text: 'text-indigo-400', bg: 'bg-indigo-400/10', border: 'border-indigo-400/20' },
   draw: { text: 'text-fuchsia-400', bg: 'bg-fuchsia-400/10', border: 'border-fuchsia-400/20' },
   code: { text: 'text-orange-400', bg: 'bg-orange-400/10', border: 'border-orange-400/20' },
+  authenticator: { text: 'text-emerald-400', bg: 'bg-emerald-400/10', border: 'border-emerald-400/20' },
 }
 
 /** Item type definitions for the "Add item" modal */
@@ -40,4 +42,5 @@ export const ITEM_TYPE_OPTIONS = [
   { type: 'secret', label: 'Secret', desc: 'PIN-protected hidden text', icon: KeyRound, color: 'text-indigo-400', bg: 'bg-indigo-400/10' },
   { type: 'draw', label: 'Drawing', desc: 'Freehand sketch or diagram', icon: Brush, color: 'text-fuchsia-400', bg: 'bg-fuchsia-400/10' },
   { type: 'code', label: 'Code', desc: 'Code snippet with syntax highlighting', icon: Code, color: 'text-orange-400', bg: 'bg-orange-400/10' },
+  { type: 'authenticator', label: 'Authenticator', desc: 'Two-factor (TOTP) codes for your accounts', icon: ShieldCheck, color: 'text-emerald-400', bg: 'bg-emerald-400/10' },
 ]

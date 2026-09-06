@@ -55,6 +55,7 @@ const trustPoints = ['Open source', 'Zero-knowledge', 'No trackers', 'Self-hosta
 const features = [
   { icon: Layers, label: 'A space for every project' },
   { icon: Boxes, label: 'Multiple formats' },
+  { icon: ShieldCheck, label: 'Built-in authenticator for 2FA codes' },
   { icon: Pin, label: 'Pin important spaces and items' },
   { icon: Search, label: 'Search across everything' },
   { icon: Save, label: 'Saves as you type' },
