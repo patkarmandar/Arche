@@ -139,7 +139,7 @@ export function SpaceCard({
       tabIndex={0}
       aria-pressed={selectMode ? selected : undefined}
       aria-label={ariaLabel}
-      className={`group relative border rounded-2xl p-4 cursor-pointer hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-0.5 transition-all duration-200 animate-fade-in-up ${
+      className={`group relative border rounded-2xl p-3.5 cursor-pointer hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-0.5 transition-all duration-200 animate-fade-in-up ${
         selected ? 'ring-1 ring-accent border-accent bg-accent/5' :
         col.pinned ? 'bg-accent/5 border-accent hover:border-accent/80' : 'bg-bg-surface border-bg-border hover:border-accent/40'
       } ${
@@ -174,7 +174,7 @@ export function SpaceCard({
         )}
       </div>
       {Array.isArray(col.tags) && col.tags.length > 0 && (
-        <div className="flex flex-wrap gap-1 mt-3">
+        <div className="flex flex-wrap gap-1 mt-2.5">
           {col.tags.slice(0, 4).map(tag => (
             <span
               key={tag}
@@ -185,7 +185,7 @@ export function SpaceCard({
           ))}
         </div>
       )}
-      <div className="flex items-center justify-between mt-4 pt-3 border-t border-bg-border gap-2">
+      <div className="flex items-center justify-between mt-3 pt-2.5 border-t border-bg-border gap-2">
         <p className="text-text-muted text-xs truncate">{itemLabel}</p>
         {!selectMode && <ActionMenu label="Space actions" actions={menuActions} />}
       </div>

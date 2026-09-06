@@ -324,7 +324,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { openPalette(); setMobileMenuOpen(false) }}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
             >
               <Command size={16} />
               Commands
@@ -332,7 +332,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { window.dispatchEvent(new CustomEvent('arche:open-shortcuts')); setMobileMenuOpen(false) }}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
             >
               <Keyboard size={16} />
               Keyboard shortcuts
@@ -340,7 +340,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { navigate('/archive'); setMobileMenuOpen(false) }}
-              className="relative flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
+              className="relative flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
             >
               <Archive size={16} />
               Archive
@@ -353,7 +353,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { navigate('/recycle-bin'); setMobileMenuOpen(false) }}
-              className="relative flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
+              className="relative flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
             >
               <Trash2 size={16} />
               Recycle bin
@@ -366,7 +366,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { setMobileMenuOpen(false); setConfirmSignOut(true) }}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-danger/10 hover:border-danger/30 text-text-secondary hover:text-danger transition-all text-sm font-medium"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-danger/10 hover:border-danger/30 text-text-secondary hover:text-danger transition-all text-sm font-medium"
             >
               <LogOut size={16} />
               Sign out
@@ -374,7 +374,7 @@ export default function DashboardPage() {
             <button
               type="button"
               onClick={() => { navigate('/settings'); setMobileMenuOpen(false) }}
-              className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl border border-bg-border hover:bg-bg-elevated text-text-secondary hover:text-text-primary transition-all text-sm font-medium"
             >
               <Settings size={16} />
               Settings
